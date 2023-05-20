@@ -1,0 +1,112 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d4a436fb-db9b-477f-ab19-017ac51ab527" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>video_games</ID>
+  <Name>video_games</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>3</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>video_games</DataSourceID>
+  <Schema>
+    <xs:schema id="video_games" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="video_games" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="274f7d71-2510-4462-ae35-2ef3a6d7965f">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_v_video_games" msprop:DbTableName="v_video_games" msprop:FriendlyName="v_video_games" msprop:TableType="View" msprop:DbSchemaName="dbo" msprop:design-time-name="9afe89ec-4ea2-461c-a62e-5b5dd0894942">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Rank" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="Rank" msprop:DbColumnName="Rank" msprop:design-time-name="55b1d526-945d-485f-a981-bc8b9a9b3cab" type="xs:int" />
+                  <xs:element name="Name" msprop:FriendlyName="Name" msprop:DbColumnName="Name" msprop:design-time-name="71c93844-5848-4a6e-bf82-6eb0826b5fa4" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Platform" msprop:FriendlyName="Platform" msprop:DbColumnName="Platform" msprop:design-time-name="8a206e80-daf3-4850-9463-e7c4d30789ad" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Genre" msprop:FriendlyName="Genre" msprop:DbColumnName="Genre" msprop:design-time-name="de2812ce-c7c5-4f42-91d6-c7e67491c211" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Year" msprop:FriendlyName="Year" msprop:DbColumnName="Year" msprop:design-time-name="5bddd092-cea9-4a3a-adb9-e3231d187dcf" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Decade" msdata:ReadOnly="true" msprop:FriendlyName="Decade" msprop:DbColumnName="Decade" msprop:design-time-name="5a7764ae-942f-44cf-83ea-164d39247c05">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="North_America_Sales" msdata:ReadOnly="true" msprop:FriendlyName="North_America_Sales" msprop:DbColumnName="North_America_Sales" msprop:design-time-name="beedbe3b-68d0-4d35-9696-3b5d6ea2f425" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Europe_Sales" msdata:ReadOnly="true" msprop:FriendlyName="Europe_Sales" msprop:DbColumnName="Europe_Sales" msprop:design-time-name="75aaae14-ddce-4736-b54f-2543d5587436" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Jpan_Sales" msdata:ReadOnly="true" msprop:FriendlyName="Jpan_Sales" msprop:DbColumnName="Jpan_Sales" msprop:design-time-name="ba6d855c-4548-436c-b658-25fcf2886bb6" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Other_Sales" msprop:FriendlyName="Other_Sales" msprop:DbColumnName="Other_Sales" msprop:design-time-name="a025aca6-be67-476d-a909-1bfd9e7f075a" type="xs:double" minOccurs="0" />
+                  <xs:element name="Global_Sales" msprop:FriendlyName="Global_Sales" msprop:DbColumnName="Global_Sales" msprop:design-time-name="66e81e5c-5325-4fb0-be7f-40fe62672014" type="xs:double" minOccurs="0" />
+                  <xs:element name="Sales_Cases" msdata:ReadOnly="true" msprop:FriendlyName="Sales_Cases" msprop:DbColumnName="Sales_Cases" msprop:design-time-name="7da8d62a-a9a1-469c-8b96-18bb67950609">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="12" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <video_games xmlns="" />
+  </Schema>
+</DataSourceView>

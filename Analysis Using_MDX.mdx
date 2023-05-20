@@ -1,0 +1,102 @@
+/*
+	After Making Cube by Using SSAS Tool 
+	using Cube For Make Analysis By Using MDX
+*/
+---------------  Analysis Using MDX Language
+-- Report For Display All Measures 
+
+select [Measures].allmembers on columns
+from [video_games]
+
+-- Report For Display All Measures per Genre
+select [Measures].allmembers on columns,
+order ([v Video Games].[Genre].allmembers   ,
+[Measures].[Global Sales] , desc) on rows
+from [video_games]
+
+-- Report For Display All Measures per Year
+
+select [Measures].allmembers on columns,
+order ( [v Video Games].[Year].allmembers   ,
+[Measures].[Global Sales] , desc) on rows
+from [video_games]
+
+
+-- Report For Display All Measures per decade
+
+select [Measures].allmembers on columns,
+order ([v Video Games].[Decade]  .allmembers   ,
+[Measures].[Global Sales] , desc) on rows
+from [video_games]
+
+-- Report For Display All Measures per platform
+select [Measures].allmembers on columns,
+order (   [v Video Games].[Platform].allmembers   ,
+[Measures].[Global Sales] , desc) on rows
+from [video_games]
+
+-- Report For Display All Measures per sales cases
+
+select [Measures].allmembers on columns,
+order (    [v Video Games].[Sales Cases].allmembers   ,
+[Measures].[Global Sales] , desc) on rows
+from [video_games]
+
+-- Top 10 Video_Games per Total_Sales
+select [Measures].allmembers on columns,
+topcount(
+		[v Video Games].[Name].[Name].allmembers ,
+		10,
+		[Measures].[Global Sales] 
+		) on rows
+from [video_games]
+
+-- Low 10 Video_Games per Total_Sales
+
+select [Measures].allmembers on columns,
+bottomcount(
+		[v Video Games].[Name].[Name].allmembers ,
+		10,
+		[Measures].[Global Sales] 
+		) on rows
+from [video_games]
+
+-- Report For Display Total_Sales Per  Genre Per Year
+
+select  [Measures].[Global Sales] on  0,
+order( ({[v Video Games].[Genre].allmembers*
+	[v Video Games].[Year].allmembers }),
+	[Measures].[Global Sales],
+	desc) on rows
+FROM  [video_games]
+
+-- Report For Display Global Sales per Genre Per dacde
+
+select  {[Measures].[Global Sales] * 
+		 [v Video Games].[Decade].allmembers} 
+	on  0,
+order( ({[v Video Games].[Genre].allmembers}),
+	[Measures].[Global Sales]  ,
+	desc) on rows
+FROM  [video_games]
+
+-- Report For Display #video_games per Genre Per Sales Cases
+
+select  {  [Measures].[#Video_Games]* 
+		  [v Video Games].[Sales Cases].allmembers} 
+	on  0,
+order( ({[v Video Games].[Genre].allmembers}),
+	[Measures].[Global Sales]  ,
+	desc) on rows
+FROM  [video_games]
+
+-- Report Display Top 10 Total Sales per Platform per Sales Cases
+select {   [Measures].[Global Sales]* 
+		  [v Video Games].[Sales Cases]  .allmembers} 
+	on  0,
+topcount(
+		[v Video Games].[Platform] .allmembers ,
+		10,
+		 [Measures].[Global Sales]
+		) on rows
+from [video_games]

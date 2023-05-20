@@ -1,0 +1,206 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8096c7bf-6ea2-496e-9b52-ee3d4cd18678" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>video_games</ID>
+  <Name>video_games</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="68a14f31-77ed-4bb2-990c-88f75e7b70a0">
+      <ID>v Video Games</ID>
+      <Name>v Video Games</Name>
+      <DimensionID>v Video Games</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="af68f467-a76e-4f94-af50-3b227f9d890e">
+          <AttributeID>Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="7c9a1e89-0251-4883-bf93-6c60d1d92cf9">
+      <ID>v Video Games</ID>
+      <Name>v Video Games</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="e2e0e67e-9b06-471a-9dd9-89c32dde7dd7">
+          <ID>Rank</ID>
+          <Name>Rank</Name>
+          <Source dwd:design-time-name="04836181-20ce-44fc-806f-865ddc50e07c">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2441e468-08b0-456a-a115-2413fa7480e3">
+              <TableID>dbo_v_video_games</TableID>
+              <ColumnID>Rank</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b40bcd1d-2ee5-452e-a87f-3d35c889fb7d">
+          <ID>North America Sales</ID>
+          <Name>North America Sales</Name>
+          <Source dwd:design-time-name="24b4d102-45d3-4320-9449-8872f01c884c">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="fc20e7a6-a134-411d-bff7-81f35c2fba3b">
+              <TableID>dbo_v_video_games</TableID>
+              <ColumnID>North_America_Sales</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="7e2554db-9b7d-4512-b947-b69341dd9d31">
+          <ID>Europe Sales</ID>
+          <Name>Europe Sales</Name>
+          <Source dwd:design-time-name="b471b7f8-4788-4dcc-9a30-32630e646583">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="65c0c6d5-9338-4892-883f-963688bf349a">
+              <TableID>dbo_v_video_games</TableID>
+              <ColumnID>Europe_Sales</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="722dfb38-4315-4b6f-b174-95e3326f7963">
+          <ID>Jpan Sales</ID>
+          <Name>Jpan Sales</Name>
+          <Source dwd:design-time-name="e31dc27c-c1cd-4f8f-8360-d30699adb9d8">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cc6982b6-b996-4cd0-9375-d71c8ac069a8">
+              <TableID>dbo_v_video_games</TableID>
+              <ColumnID>Jpan_Sales</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1434c60e-9a46-41d9-bf3c-e7584f589353">
+          <ID>Other Sales</ID>
+          <Name>Other Sales</Name>
+          <Source dwd:design-time-name="fafcebc7-b78c-4c6c-bc3b-fd5cb39a6e4a">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2900e812-631d-4747-8706-5c40e4ce3f4b">
+              <TableID>dbo_v_video_games</TableID>
+              <ColumnID>Other_Sales</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="7f47343b-53f1-4b7d-9e10-d969574c272d">
+          <ID>Global Sales</ID>
+          <Name>Global Sales</Name>
+          <Source dwd:design-time-name="64c41fd8-f055-4382-834d-4cc26d9c5e28">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="dbfcec58-6398-4eab-9880-75b4dc119ddf">
+              <TableID>dbo_v_video_games</TableID>
+              <ColumnID>Global_Sales</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d70ddd5c-cfb8-4885-9e18-62db791f61e0">
+          <ID>v Video Games Count</ID>
+          <Name>v Video Games Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="466aa003-eb94-4a89-9dd3-317dfe37788e">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="0a1da5e1-d3b3-4747-b8b8-c17bc148e080">
+              <TableID>dbo_v_video_games</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8aedc745-2d0d-46a8-b53d-367a75bcc089">
+          <CubeDimensionID>v Video Games</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="eb7ac339-ef41-4f26-b4fb-aa2a16c15420">
+              <AttributeID>Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="37d5164c-fcbd-4786-b843-cd85fe1ae453">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3b02c81d-0894-46e5-b484-f44adb1bdfe0">
+                    <TableID>dbo_v_video_games</TableID>
+                    <ColumnID>Name</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="73cd9650-a5fd-4d26-be42-15608f2a2bd8">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f6c0b9da-cdeb-4bf6-832d-ff8b78344d64">
+                    <TableID>dbo_v_video_games</TableID>
+                    <ColumnID>Platform</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="3a1a0326-fc5c-4e35-b16f-f4de8ad7432a">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="756e63d9-3ea9-42df-9559-6c5b5c87558b">
+                    <TableID>dbo_v_video_games</TableID>
+                    <ColumnID>Genre</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="40ce7f36-1f30-4e9f-b29b-7344175620b9">
+                  <DataType>WChar</DataType>
+                  <DataSize>20</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c875ab04-a808-476e-8a0f-24b1c7b6f8c5">
+                    <TableID>dbo_v_video_games</TableID>
+                    <ColumnID>Year</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="f3f36e1e-64cb-4af9-9bc1-0d365be42eda">
+                  <DataType>WChar</DataType>
+                  <DataSize>4</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e5de7d51-0e71-4014-9945-b210c5392cb4">
+                    <TableID>dbo_v_video_games</TableID>
+                    <ColumnID>Decade</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="1aadff73-f91c-4836-a129-e47f9a88a2a3">
+    <DataSourceViewID>video_games</DataSourceViewID>
+  </Source>
+</Cube>

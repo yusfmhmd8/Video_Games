@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Video_Games", "Video_Games.rptproj", "{F680F86B-E03F-4315-827E-DB65AC4199EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F680F86B-E03F-4315-827E-DB65AC4199EE}.Debug|Default.ActiveCfg = Debug
+		{F680F86B-E03F-4315-827E-DB65AC4199EE}.Debug|Default.Build.0 = Debug
+		{F680F86B-E03F-4315-827E-DB65AC4199EE}.Debug|Default.Deploy.0 = Debug
+		{F680F86B-E03F-4315-827E-DB65AC4199EE}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{F680F86B-E03F-4315-827E-DB65AC4199EE}.DebugLocal|Default.Build.0 = DebugLocal
+		{F680F86B-E03F-4315-827E-DB65AC4199EE}.Release|Default.ActiveCfg = Release
+		{F680F86B-E03F-4315-827E-DB65AC4199EE}.Release|Default.Build.0 = Release
+		{F680F86B-E03F-4315-827E-DB65AC4199EE}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77BE3058-C59E-4B1A-A1D0-BEF70BD36DA8}
+	EndGlobalSection
+EndGlobal
